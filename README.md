@@ -10,3 +10,6 @@ a tool to help you make a free lifetime Linux-Debian RDP from Google.
 - enter a PIN code for your RDP.
 - after finishing installation go to this link: https://remotedesktop.google.com/access/ 
 - enjoy.
+
+# Added Features
+- Katoolin Included by default, run "sudo katoolin" after installing.
