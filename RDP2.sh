@@ -1,12 +1,12 @@
 #! /bin/bash
+print "Create your ROOT User Name"
+read -p "User Name: " USR
+print "Create your ROOT Password"
+read -sp "Password: " PSWD
 printf "Installing RDP Be Patience... " >&2
 {
-echo Create your ROOT User Name
-read -p "User Name: " USR
 sudo useradd -m """$USR"""
 sudo adduser """$USR""" sudo
-echo Create your ROOT Password
-read -sp "Password: " PSWD
 echo """$USR""" ':' """$PSWD""" | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
