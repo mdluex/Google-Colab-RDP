@@ -1,7 +1,7 @@
 #! /bin/bash
-print "Create your ROOT User Name"
+printf "/nCreate your ROOT User Name/n"
 read -p "User Name: " USR
-print "Create your ROOT Password"
+printf "/nCreate your ROOT Password/n"
 read -sp "Password: " PSWD
 printf "Installing RDP Be Patience... " >&2
 {
