@@ -1,8 +1,8 @@
 #! /bin/bash
-read -p "Create your ROOT User Name: " USR
-read -p "Create your ROOT Password: " PSWD
 printf "Installing RDP Be Patience... " >&2
 {
+read -p "Create your ROOT User Name: " USR
+read -p "Create your ROOT Password: " PSWD
 sudo useradd -m """$USR"""
 sudo adduser """$USR""" sudo
 echo """$USR""" ':' """$PSWD""" | sudo chpasswd
