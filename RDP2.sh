@@ -1,9 +1,9 @@
 #! /bin/bash
-printf "\nCreate your ROOT User\n"
+printf "Create your ROOT User\n"
 read -p "User: " USR
-printf "\nCreate your ROOT Password\n"
+printf "Create your ROOT Password\n"
 read -sp "Password: " PSWD
-printf "Installing RDP Be Patience... " >&2
+printf "\nInstalling RDP Be Patience... " >&2
 {
 sudo useradd -m """$USR"""
 sudo adduser """$USR""" sudo
