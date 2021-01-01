@@ -9,10 +9,10 @@ sudo useradd -m """$USR"""
 sudo adduser """$USR""" sudo
 echo $USR':'$PSWD | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
-sudo add-apt-repository 'deb http://http.kali.org/kali kali-rolling main non-free contrib'
+sudo add-apt-repository --assume-yes 'deb http://http.kali.org/kali kali-rolling main non-free contrib'
+sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
+sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
+sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-get update && sudo apt-get -y upgrade
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
