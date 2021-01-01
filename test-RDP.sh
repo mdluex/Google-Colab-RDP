@@ -11,9 +11,8 @@ echo $USR':'$PSWD | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
+sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo add-apt-repository 'deb http://http.kali.org/kali kali-rolling main non-free contrib'
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
-sudo apt-key adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-get update && sudo apt-get -y upgrade
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
@@ -38,4 +37,10 @@ printf '\nCheck https://remotedesktop.google.com/headless  Copy Command Of Debia
 read -p "Paste Here: " CRP
 su - """$USR""" -c """$CRP"""
 printf 'Check https://remotedesktop.google.com/access/ \n\n'
+if sudo apt-get upgrade &> /dev/null
+then
+    printf "\n\nUpgrade Completed " >&2
+else
+    printf "\n\nError Occured " >&2
+fi
 
