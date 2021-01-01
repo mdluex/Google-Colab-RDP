@@ -13,12 +13,14 @@ sudo add-apt-repository --assume-yes 'deb http://http.kali.org/kali kali-rolling
 sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
+sudo apt-key --assume-yes adv --keyserver pool.sks-keyservers.net --recv-keys ED444FF07D8D0BF6
 sudo apt-get update && sudo apt-get -y upgrade
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
-apt update && sudo apt install --yes --force-yes kali-desktop-xfce
+apt install --assume-yes xfce4 desktop-base
+sudo apt update && sudo apt install --yes --force-yes kali-desktop-xfce
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
