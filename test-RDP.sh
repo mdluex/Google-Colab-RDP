@@ -14,7 +14,7 @@ wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
-apt-get install --yes --force-yes kali-desktop-xfce xorg xrdp
+apt install --assume-yes xfce4 desktop-base
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
@@ -26,6 +26,7 @@ sudo git clone https://github.com/LionSec/katoolin.git && cp katoolin/katoolin.p
 sudo chmod +x /usr/bin/katoolin
 sudo add-apt-repository 'deb http://http.kali.org/kali kali-rolling main non-free contrib'
 sudo apt-get update
+sudo apt-get install --yes --force-yes kali-desktop-xfce xorg xrdp
 sudo adduser """$USR""" chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
