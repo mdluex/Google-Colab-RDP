@@ -1,6 +1,6 @@
 # Google Colab RDP
 a tool to help you make a free lifetime Linux-Debian RDP from Google.  
-![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/124UEp6XSeDWN3XtU4Yl-5y52OriKsWkZ
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/124UEp6XSeDWN3XtU4Yl-5y52OriKsWkZ]
 
 # How to Use
 - open this link: https://colab.research.google.com/drive/124UEp6XSeDWN3XtU4Yl-5y52OriKsWkZ
